@@ -188,6 +188,15 @@ const Contact = (props) => {
                                                             <option value="Efectivo">Efectivo</option>
                                                         </select>
                                                     </div>
+                                                    { payment === "Zelle" ?  (
+                                                        <div>
+                                                            <h4>Datos zelle:</h4>
+                                                            <h5>nodosur2021@gmail.com</h5>
+                                                            <h5>Nombre: Luminayda</h5>
+                                                            <h5>tlf: +58 424-6081675</h5>
+                                                        </div>)
+                                                    : null }
+
                                                     <br/>
                                                     <button className="rn-button-style--2 btn-solid" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Enviar</button>
                                                 </form>

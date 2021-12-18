@@ -58,7 +58,7 @@ class DigitalAgency extends Component{
                 <Helmet pageTitle="Nodo Sur" />
 
                 {/* Start Header Area  */}
-                <header className="header-area formobile-menu header--fixed default-color">
+                {/* <header className="header-area formobile-menu header--fixed default-color">
                     <div className="header-wrapper" id="header-wrapper">
                         <div className="header-left">
                             <div className="logo">
@@ -68,7 +68,7 @@ class DigitalAgency extends Component{
                             </div>
                         </div>
                     </div>
-                </header>
+                </header> */}
                 {/* End Header Area  */}
 
                 {/* Start Slider Area   */}
@@ -76,14 +76,17 @@ class DigitalAgency extends Component{
                     <div className="slider-activation slider-digital-agency">
                         <Slider className="rn-slick-dot dot-light" {...slideSlick}>
                             {SlideList.map((value , index) => (
-                                <div className={`slide slide-style-2 fullscreen d-flex align-items-center justify-content-center bg_image ${value.bgImage}`} key={index} data-black-overlay="6">
+                                <div className={`slide slide-style-2 fullscreen align-items-center justify-content-center bg_image ${value.bgImage}`} key={index} data-black-overlay="6">
                                     <div className="container">
                                         <div className="row">
                                             <div className="col-lg-12">
                                                 <div className={`inner ${value.textPosition}`}>
-                                                    {value.category ? <span>{value.category}</span> : ''}
+                                                    <div className="logo col-lg-12 d-flex justify-content-center">
+                                                        <a href="#">
+                                                            <img className="logo-1" src="/assets/images/logo/logonodo.png" alt="Logo Images"/>
+                                                        </a>
+                                                    </div>
                                                     {value.title ? <h1 className="title">{value.title}</h1> : ''}
-                                                    {value.description ? <p className="description">{value.description}</p> : ''}
                                                     {value.buttonText ? <div className="slide-btn"><a className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''}
                                                 </div>
                                             </div>
